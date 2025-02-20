@@ -1,0 +1,26 @@
+﻿@page "/"
+@using ClassExampleController;
+@using ClassExampleController.Interfaces;
+@using ClassExampleWebView.Components.Models;
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+Value 1:
+<InputNumber @bind-Value="CalculatorModel.Value1" />
+
+Value 2:
+<InputNumber @bind-Value="CalculatorModel.Value2" />
+
+Result: @CalculatorModel.Result
+
+<button @onclick="Add">Add</button>
+
+@code 
+{
+}
