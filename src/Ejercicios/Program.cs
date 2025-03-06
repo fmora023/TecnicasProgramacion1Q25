@@ -1,4 +1,9 @@
-﻿internal class Program
+﻿using Ejercicios;
+
+/// <summary>
+/// Entry point of the application.
+/// </summary>
+internal class Program
 {
     /// <summary>
     /// Defines the entry point of the application.
@@ -13,73 +18,41 @@
         Console.WriteLine("Hello, World!");
 
         List<int> elementos = new List<int> { 1, 2, 3, 8, 5, 9, 11 };
-        Console.WriteLine($"La suma de los elementos es: {SumaElementos(elementos)}");
+        Console.WriteLine($"La suma de los elementos es: {ClassTasks.SumaElementos(elementos)}");
         
-        var maxMin = MaxMin(elementos);
+        var maxMin = ClassTasks.MaxMin(elementos);
         Console.WriteLine($"El numero maximo es : {maxMin.Item1} y el minimo es: {maxMin.Item2}");
 
-        var paresImpares = ParesImparesEx(elementos);
+        var paresImpares = ClassTasks.ParesImparesEx(elementos);
         Console.WriteLine($"Pares: {string.Join(",", paresImpares.Pares)}");
         Console.WriteLine($"Impares: {string.Join(",", paresImpares.Impares)}");
-    }
 
-    private static int SumaElementos(List<int> elementos)
-    {
-        var result = 0;
-        foreach (int elemento in elementos)
-        {
-            result += elemento;
-        }
-        return result;
-    }
+        var ocurrencias = ClassTasks.OccurenciesCount("palabra");
 
-    public static (int, int) MaxMin(List<int> input)
-    {
-        if (input.Count == 0)
+        foreach (var item in ocurrencias)
         {
-            return (0, 0);
+            Console.WriteLine($"La letra {item.Key} se repite {item.Value} veces");
         }
 
-        var min = input[0];
-        var max = input[0];
-        foreach (var element in input)
+        Console.WriteLine(Environment.NewLine);
+        Console.WriteLine(ClassTasks.RemoveChar("hola", 'a'));
+
+        Console.WriteLine(Environment.NewLine);
+        Console.WriteLine(ClassTasks.RemoveVocals("hOla"));
+
+        var words = ClassTasks.CountWords("Contar palabras input: hola hola hi => expected: hola : 2, hi : 1");
+
+        foreach (var item in words)
         {
-            if (element > min)
+            if (item.Value > 1)
             {
-                min = element;
-            }
-            if (element < max)
-            {
-                max = element;
-            }
-        }
-
-        return (max, min);
-    }
-
-    public static ParesImparesResult ParesImparesEx(List<int> input)
-    {
-        var result = new ParesImparesResult();
-
-        foreach(var element in input)
-        {
-            if (element % 2 == 0)
-            {
-                result.Pares.Add(element);
+                Console.WriteLine($"La palabra {item.Key} se repite {item.Value} veces");
             }
             else
             {
-                result.Impares.Add(element);
+                Console.WriteLine($"La palabra {item.Key} se repite {item.Value} vez");
             }
         }
-
-        return result;
-    }
-
-    public class ParesImparesResult
-    {
-        public List<int> Pares { get; set; } = new List<int>();
-        public List<int> Impares { get; set; } = new List<int>();
     }
 
 }

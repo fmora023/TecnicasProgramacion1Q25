@@ -38,6 +38,7 @@
             tbx_Result = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            btn_FileHandler = new Button();
             SuspendLayout();
             // 
             // btn_sumar
@@ -137,11 +138,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // btn_FileHandler
+            // 
+            btn_FileHandler.Location = new Point(43, 12);
+            btn_FileHandler.Name = "btn_FileHandler";
+            btn_FileHandler.Size = new Size(254, 60);
+            btn_FileHandler.TabIndex = 10;
+            btn_FileHandler.Text = "Abrir Manejador de Archivos";
+            btn_FileHandler.UseVisualStyleBackColor = true;
+            btn_FileHandler.Click += Btn_FileHandler_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1160, 676);
+            Controls.Add(btn_FileHandler);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(tbx_Result);
@@ -171,6 +183,7 @@
         private System.Windows.Forms.TextBox tbx_Result;
         private Button button1;
         private Button button2;
+        private Button btn_FileHandler;
     }
 }
 

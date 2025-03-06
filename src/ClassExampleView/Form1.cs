@@ -72,5 +72,11 @@
                 }
             }
         }
+
+        private void Btn_FileHandler_Click(object sender, EventArgs e)
+        {
+            var fileHandler = new FileHandlerForm();
+            fileHandler.Show();
+        }
     }
 }
