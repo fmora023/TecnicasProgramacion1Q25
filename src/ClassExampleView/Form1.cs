@@ -20,6 +20,17 @@
             this.Calculator = calculator;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var login = new Login();
+            login.ShowDialog();
+
+            if (login.DialogResult != DialogResult.OK)
+            {
+                login.ShowDialog();
+            }
+        }
+
         private void Btn_sumar_Click(object sender, EventArgs e)
         {
             if (this.ValidateInputs(tbx_input1.Text, out var value1) && this.ValidateInputs(tbx_Input2.Text, out var value2))
@@ -77,6 +88,12 @@
         {
             var fileHandler = new FileHandlerForm();
             fileHandler.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var buttons = new ButtonsForm();
+            buttons.Show();
         }
     }
 }

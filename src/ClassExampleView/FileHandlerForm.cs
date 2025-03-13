@@ -1,5 +1,6 @@
 ﻿using ClassExampleController;
 using ClassExampleController.FileHandle;
+using ClassExampleModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,28 @@ namespace ClassExample
             else
             {
                 MessageBox.Show("An error occurred while creating the file");
+            }
+        }
+
+        private void btn_AddRegister_Click(object sender, EventArgs e)
+        {
+            var person = new Student()
+            {
+                Name = "Juan",
+                LastName = "Diaz",
+                Age = 25
+            };
+
+            var path = this.txt_FilePath.Text;
+            var result = this.dataAccessManager.Add(person, path);
+
+            if (result)
+            {
+                MessageBox.Show("Person added successfully");
+            }
+            else
+            {
+                MessageBox.Show("An error occurred while adding the person");
             }
         }
     }

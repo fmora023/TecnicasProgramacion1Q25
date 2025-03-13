@@ -1,4 +1,5 @@
-﻿using ClassExampleModel.Abstractions;
+﻿using ClassExampleModel;
+using ClassExampleModel.Abstractions;
 
 namespace ClassExampleController.Interfaces
 {
@@ -7,6 +8,13 @@ namespace ClassExampleController.Interfaces
     /// </summary>
     public interface IFileHandle
     {
+        /// <summary>
+        /// Adds the specified person.
+        /// </summary>
+        /// <param name="person">The person.</param>
+        /// <param name="path">The path.</param>
+        public bool Add(Student person, string path);
+
         /// <summary>
         /// Reads the people.
         /// </summary>

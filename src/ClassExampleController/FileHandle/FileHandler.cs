@@ -1,4 +1,5 @@
 ﻿using ClassExampleController.Interfaces;
+using ClassExampleModel;
 using ClassExampleModel.Abstractions;
 
 namespace ClassExampleController.FileHandle
@@ -8,6 +9,26 @@ namespace ClassExampleController.FileHandle
     /// </summary>
     public class FileHandler : IFileHandle
     {
+        /// <summary>
+        /// Adds the specified person.
+        /// </summary>
+        /// <param name="person">The person.</param>
+        /// <param name="path">The path.</param>
+        public bool Add(Student person, string path)
+        {
+            var contentCounter = File.ReadAllLines(path).Length;
+            File.AppendAllText(path, person.ToString());
+
+            if (contentCounter == File.ReadAllLines(path).Length)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         /// <summary>
         /// Reads the people.
         /// </summary>

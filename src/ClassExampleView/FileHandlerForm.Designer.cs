@@ -34,6 +34,7 @@
             txt_FilePath = new TextBox();
             label3 = new Label();
             txt_RequiredPeople = new TextBox();
+            btn_AddRegister = new Button();
             SuspendLayout();
             // 
             // label1
@@ -74,7 +75,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(45, 108);
+            label3.Location = new Point(41, 111);
             label3.Name = "label3";
             label3.Size = new Size(123, 20);
             label3.TabIndex = 4;
@@ -87,11 +88,22 @@
             txt_RequiredPeople.Size = new Size(125, 27);
             txt_RequiredPeople.TabIndex = 5;
             // 
+            // btn_AddRegister
+            // 
+            btn_AddRegister.Location = new Point(262, 163);
+            btn_AddRegister.Name = "btn_AddRegister";
+            btn_AddRegister.Size = new Size(192, 29);
+            btn_AddRegister.TabIndex = 6;
+            btn_AddRegister.Text = "Add Register";
+            btn_AddRegister.UseVisualStyleBackColor = true;
+            btn_AddRegister.Click += btn_AddRegister_Click;
+            // 
             // FileHandlerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(971, 445);
+            Controls.Add(btn_AddRegister);
             Controls.Add(txt_RequiredPeople);
             Controls.Add(label3);
             Controls.Add(txt_FilePath);
@@ -112,5 +124,6 @@
         private TextBox txt_FilePath;
         private Label label3;
         private TextBox txt_RequiredPeople;
+        private Button btn_AddRegister;
     }
 }

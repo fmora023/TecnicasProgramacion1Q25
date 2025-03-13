@@ -1,5 +1,4 @@
-﻿
-using ClassExampleController.Interfaces;
+﻿using ClassExampleController.Interfaces;
 using ClassExampleModel;
 using ClassExampleModel.Abstractions;
 
@@ -19,6 +18,17 @@ namespace ClassExampleController
         public DataAccessManager(IFileHandle fileHandler)
         {
             this.fileHandler = fileHandler;
+        }
+
+        /// <summary>
+        /// Adds the specified person.
+        /// </summary>
+        /// <param name="person">The person.</param>
+        /// <param name="path">The path.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
+        public bool Add(Student person, string path)
+        {
+            return this.fileHandler.Add(person, path);
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
-﻿namespace ClassExample
+﻿
+namespace ClassExample
 {
     partial class Form1
     {
@@ -39,6 +40,7 @@
             button1 = new Button();
             button2 = new Button();
             btn_FileHandler = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // btn_sumar
@@ -148,11 +150,22 @@
             btn_FileHandler.UseVisualStyleBackColor = true;
             btn_FileHandler.Click += Btn_FileHandler_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(43, 96);
+            button3.Name = "button3";
+            button3.Size = new Size(254, 57);
+            button3.TabIndex = 11;
+            button3.Text = "Buttons Form";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1160, 676);
+            Controls.Add(button3);
             Controls.Add(btn_FileHandler);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -167,6 +180,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,6 +198,7 @@
         private Button button1;
         private Button button2;
         private Button btn_FileHandler;
+        private Button button3;
     }
 }
 
