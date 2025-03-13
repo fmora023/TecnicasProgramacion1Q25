@@ -52,7 +52,7 @@ namespace ClassExample
             var person = new Student()
             {
                 Name = "Juan",
-                LastName = "Diaz",
+                LastName = "Diaz Perez",
                 Age = 25
             };
 
