@@ -1,6 +1,7 @@
 ﻿namespace ClassExampleController
 {
     using ClassExampleController.Interfaces;
+    using System;
 
     /// <summary>
     /// Implements <see cref="ICalculator"/>.
@@ -28,6 +29,12 @@
         public int Multiply(int input1, int input2)
         {
             return input1 * input2;
+        }
+
+        /// <inheritdoc/>
+        public double Pow(int input1, int input2)
+        {
+            return Math.Pow(input1, input2);
         }
 
         /// <inheritdoc/>

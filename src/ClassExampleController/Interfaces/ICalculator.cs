@@ -30,6 +30,14 @@
         int Multiply(int input1, int input2);
 
         /// <summary>
+        /// Pows the specified input1.
+        /// </summary>
+        /// <param name="input1">The input1.</param>
+        /// <param name="input2">The input2.</param>
+        /// <returns></returns>
+        double Pow(int input1, int input2);
+
+        /// <summary>
         /// Divides the specified input1.
         /// </summary>
         /// <param name="input1">The input1.</param>

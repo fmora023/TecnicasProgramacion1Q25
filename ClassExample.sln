@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicios", "src\Ejercicio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassExampleModel", "src\ClassExampleModel\ClassExampleModel.csproj", "{D20403CA-14A0-44C0-9F57-22855BE29360}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D7320813-2A32-4875-A39F-40716FBD1CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassExampleControllerTest", "test\ClassExampleControllerTest\ClassExampleControllerTest.csproj", "{DF63811E-039F-46B3-B4AD-B445C117DA8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,8 +43,15 @@ Global
 		{D20403CA-14A0-44C0-9F57-22855BE29360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D20403CA-14A0-44C0-9F57-22855BE29360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D20403CA-14A0-44C0-9F57-22855BE29360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF63811E-039F-46B3-B4AD-B445C117DA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF63811E-039F-46B3-B4AD-B445C117DA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF63811E-039F-46B3-B4AD-B445C117DA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF63811E-039F-46B3-B4AD-B445C117DA8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF63811E-039F-46B3-B4AD-B445C117DA8C} = {D7320813-2A32-4875-A39F-40716FBD1CAB}
 	EndGlobalSection
 EndGlobal
