@@ -83,5 +83,41 @@ namespace ClassExampleControllerTest
             // Assert
             Assert.AreEqual(8, result);
         }
+
+        /// <summary>
+        /// Test the mult operation.
+        /// </summary>
+        [TestMethod]
+        public void MultTest()
+        {
+            // Arrange 
+            var calculator = new Calculator();
+            var input1 = 5;
+            var input2 = 5;
+
+            // Act
+            var result = calculator.Multiply(input1, input2);
+
+            // Assert
+            Assert.AreEqual(25, result);
+        }
+
+        /// <summary>
+        /// Test the subtract operation.
+        /// </summary>
+        [TestMethod]
+        public void SubtractTest()
+        {
+            // Arrange 
+            var calculator = new Calculator();
+            var input1 = 10;
+            var input2 = 5;
+
+            // Act
+            var result = calculator.Subtract(input1, input2);
+
+            // Assert
+            Assert.AreEqual(5, result);
+        }
     }
 }

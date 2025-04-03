@@ -13,7 +13,7 @@ namespace ClassExampleController.Interfaces
         /// </summary>
         /// <param name="person">The person.</param>
         /// <param name="path">The path.</param>
-        public bool Add(Student person, string path);
+        public bool Add(Person person, string path);
 
         /// <summary>
         /// Reads the people.

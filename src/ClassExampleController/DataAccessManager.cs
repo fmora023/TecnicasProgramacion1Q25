@@ -40,7 +40,13 @@ namespace ClassExampleController
         public List<Person> GenerateFileAndPeople(int peopleRequired, string fileName)
         {
             var people = this.GeneratePeople(peopleRequired);
-            this.fileHandler.WritePeople(people, fileName);
+
+            var result = this.fileHandler.WritePeople(people, fileName);
+            if (!result)
+            {
+                return new List<Person>();
+            }
+
             return people;
         }
 
@@ -63,8 +69,8 @@ namespace ClassExampleController
 
             for (int i = 0; i < peopleRequired; i++)
             {
-                var role = random.Next(0, 1);
-                if (role == 0)
+                var role = random.Next(0, 100);
+                if (role % 5 != 0)
                 {
                     var student = new Student();
                     student.Name = names[random.Next(0, names.Count - 1)];
