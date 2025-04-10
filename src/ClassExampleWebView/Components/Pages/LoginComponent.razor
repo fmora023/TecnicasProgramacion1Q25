@@ -1,0 +1,34 @@
+﻿@page "/"
+
+@rendermode RenderMode.InteractiveServer
+
+<div class="text-center">
+    <main class="form-signin">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <div class="form-floating">
+            <label for="username" class="floatingInput">Username:</label>
+            <InputText class="form-control" id="username" @bind-Value="Username" />
+            <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
+        </div>
+        <div class="form-floating">
+            <label class="floatingInput" for="password">Password:</label>
+            <InputText class="form-control" id="password" type="password" @bind-Value="Password" />
+        </div>
+
+        <div class="form-floating">
+            <button @onclick="Login">Login</button>
+        </div>
+    </main>
+</div>
+
+<style>
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+    }
+</style>
+
+@code {
+}

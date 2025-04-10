@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/Home"
 @using ClassExampleController;
 @using ClassExampleController.Interfaces;
 @using ClassExampleWebView.Components.Models;
@@ -20,6 +20,8 @@ Value 2:
 Result: @CalculatorModel.Result
 
 <button @onclick="Add">Add</button>
+
+<button @onclick="OpenData">Open FileHandler</button>
 
 @code 
 {

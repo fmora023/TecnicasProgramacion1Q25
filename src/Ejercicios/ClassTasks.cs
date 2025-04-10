@@ -119,6 +119,12 @@
             return result;
         }
 
+        /// <summary>
+        /// Removes the character.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="charToBeRemoved">The character to be removed.</param>
+        /// <returns></returns>
         public static string RemoveChar(string input, char charToBeRemoved)
         {
             if (string.IsNullOrEmpty(input))  // input == null || input == ""
@@ -177,6 +183,24 @@
                 result += elemento;
             }
             return result;
+        }
+
+        /// <summary>
+        /// Determines whether the specified input is palindrome.
+        /// ana => true 
+        /// casa => false
+        /// annna => true
+        /// abcdeedcba => true
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified input is palindrome; otherwise, <c>false</c>.
+        /// </returns>
+        /// <exception cref="System.NotImplementedException">Part of the quiz is to implement this method</exception>
+        public static bool IsPalindrome(string input)
+        {
+            // to be implemented.
+            throw new NotImplementedException("Part of the quiz is to implement this method");
         }
     }
 }

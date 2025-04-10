@@ -1,0 +1,54 @@
+﻿@page "/filehandler"
+@using ClassExampleController
+@using ClassExampleController.FileHandle
+@using ClassExampleModel.Abstractions
+@using Microsoft.AspNetCore.Components
+
+@rendermode RenderMode.InteractiveServer
+
+<button @onclick="GenerateData">Generate and Upload File</button>
+
+@if(this.People.Any())
+{
+    <h3>People</h3>
+    <ul>
+        @foreach (var person in this.People)
+        {
+            <li>@person.Name - @person.Age</li>
+        }
+    </ul>
+
+    <h3>Table</h3>
+    <table class="table">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Age</th>
+        </tr>
+        @foreach (var person in this.People)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>@person.LastName</td>
+                <td>@person.Age</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No data generated yet.</p>
+}
+
+@code {
+    private readonly DataAccessManager dataAccessManager = new DataAccessManager(new FileHandler());
+    private readonly string path = @"S:\UPI\Tecnicas de Programacion\Repos\1Q2025\mynewcsv3.csv";
+    private List<Person> People = new List<Person>();
+
+
+    private void GenerateData()
+    {
+        this.People = this.dataAccessManager.GenerateFileAndPeople(10, path);
+        this.StateHasChanged();
+    }
+}
